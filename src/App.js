@@ -10,13 +10,15 @@ import PageNotFound from './components/PageNotFound/PageNotFound'
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Header/>
+      <div className="container">
         <Routes>
           <Route path="/" exact element={<Home/>} />
           <Route path="/movie/:imdbID" exact element={<MovieDetails/>} />
           <Route path="*" exact element={<PageNotFound/>} />
         </Routes>
+          </div>
         <Footer />
     </div>
   );
